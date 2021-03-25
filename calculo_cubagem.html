@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--      
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        -->
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <title>Calculo de Frete</title>
+</head>
+
+<body>
+  <div class="mb-3">
+
+    <nav class="navbar navbar-expand-lg ">
+
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color:white;font-size: 25px;">Calculadora de Fretes</a>
+        <div style="color:white;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            class="bi bi-calculator" viewBox="0 0 16 16">
+            <path
+              d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+            <path
+              d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z" />
+          </svg></div>
+      </div>
+
+    </nav>
+    <br>
+    <h1 class="mb-3">Calculo por Cubagem</h1>
+
+  </div>
+  <br>
+
+  <div id="wrap">
+    <div id="main" class="container clear-top">
+      <div class="accordion accordion-flush  " style="border-color: #194D33;border-radius: 25px;"
+        id="accordionFlushExample">
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Encontrar M³ <div id="resultado"></div>
+            </button>
+
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <form>
+                <div class="card" style="width: 330px;margin-left: -12px;">
+                  <h5 class="card">Dados da carga</h5>
+                  <div class="card-body">
+                    <input placeholder="Digite altura" type="number" class="form-control inpaltura" name="altura"
+                      id="altura">
+                    <input placeholder="Digite a largura" type="number" class="form-control inplargura" name="largura"
+                      id="largura">
+                    <input placeholder="Digite a profundidade" type="number" class="form-control inpprofund"
+                      name="profundidade" id="profundidade">
+                    <input placeholder="Digite a Quantidade item" type="number" class="form-control inpqtd"
+                      name="quantidade" id="quantidade">
+                  </div>
+                </div>
+                <button type="button" class="btcub" onclick="calcularcubico()">Calcular</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <input placeholder="M³" class="form-control inpcub" name="cubicos" id="cubicos"><br>
+            <input placeholder="Valor do frete M³" class="form-control inpvcub" name="valorfrete" id="valorfrete">
+            <br>
+            <div id="resultados"></div>
+            <button class="btval" type="button" onclick="calcularfretecubico()">Calcular</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <ul class="nav  nav-fill">
+      <li class="nav-item" style="margin-top: -20px;">
+        <a class="nav-link active" aria-current="page" style="color: white;" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stack"
+            viewBox="0 0 16 16">
+            <path
+              d="M14.12 10.163l1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" />
+            <path
+              d="M14.12 6.576l1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
+          </svg><br>
+          Ton</a>
+      </li>
+      <li class="nav-item" style="margin-top: -20px;">
+        <a class="nav-link" style="color: white;" href="calculo_cubagem.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box"
+            viewBox="0 0 16 16">
+            <path
+              d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+          </svg><br>
+          Cubagem</a>
+      </li>
+      <li class="nav-item" style="margin-top: -20px;">
+        <a class="nav-link" style="color: white;" href="calculo_km.html">
+          <svg href="calculo_km.html" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-map" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98l4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+          </svg><br>
+          KM</a>
+      </li>
+    </ul>
+  </footer>
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

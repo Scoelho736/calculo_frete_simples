@@ -1,0 +1,161 @@
+body {
+    background-color: ghostwhite;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+}
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+    position: relative;
+    margin-top: -220px; /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    padding-top: 20px;
+    background-color: #85d2ab;
+}
+nav {
+    background-color: #194d33;
+}
+
+/*  CSS PAGINA CALCULO KM     */
+.btkm {
+    background-color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    height: 40px;
+    width: 300px;
+    margin-left: -2px;
+}
+.inpvalorkm {
+    background-color: rgb(254, 254, 255);
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 25px;
+    height: 40px;
+    width: 300px;
+}
+.inpkn {
+    background-color: rgb(254, 254, 255);
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+}
+/*  CSS PAGINA INDEX     */
+
+.inppeso {
+    background-color: rgb(254, 254, 255);
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+}
+.inpvton {
+    background-color: rgb(254, 254, 255);
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 25px;
+    height: 40px;
+    width: 300px;
+}
+.btton {
+    background-color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    height: 40px;
+    width: 300px;
+    margin-left: 2px;
+    margin-top: 260;
+}
+/*CSS PAGINA CALCULO CUBICO  */
+.inpaltura {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 250px;
+}
+.inplargura {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 250px;
+}
+.inpprofund {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 250px;
+}
+.inpqtd {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 40px;
+    width: 250px;
+}
+.btcub {
+    background-color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 25px;
+    height: 40px;
+    width: 300px;
+}
+.inpcub {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 35px;
+    width: 300px;
+}
+.inpvcub {
+    background-color: rgb(254, 254, 255);
+    color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 5px;
+    height: 35px;
+    width: 300px;
+}
+.btval {
+    background-color: #194d33;
+    border-radius: 6px;
+    border-color: #194d33;
+    margin-top: 95px;
+    height: 40px;
+    width: 300px;
+}
